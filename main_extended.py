@@ -12,7 +12,9 @@ New environment variables:
     NCBI_API_KEY       - Optional NCBI API key for higher rate limits
     FETCH_DAYS         - Number of days to look back (default: 1)
 """
-
+import sys
+from unittest.mock import MagicMock
+sys.modules['llama_cpp'] = MagicMock()
 import os
 import sys
 import logging
